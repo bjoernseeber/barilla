@@ -8,7 +8,7 @@ mongoose.connect("mongodb://localhost/barilla", {
 
 const recipes = [
   {
-    name: "SPAGHETTI WITH EGGPLANT, ZUCCHINI",
+    name: "SPAGHETTI WITH EGGPLANT & ZUCCHINI",
     ingredientsList: [zucchini, chives, garlic, eggplant, parmiggiano],
     ingredientsFull: ["1 zucchini sliced in half moons", "2 tablespoon chives chopped", "2 cloves garlic chopped", "2 cups eggplant diced", "½ cup Parmigiano Reggiano cheese shredded"],
     pasta: "Spaghetti",
