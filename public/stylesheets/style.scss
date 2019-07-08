@@ -1,5 +1,10 @@
 body {
+<<<<<<< HEAD
+	padding: 10px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+=======
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+>>>>>>> 696c9db0762178b0c5d406d84eb54570b16767cb
 }
 
 *{
@@ -7,19 +12,40 @@ body {
   margin: 0;
 }
 .navbar {
-  background-color: rgb(2,31,66);
-  color: rgb(254,203,69);
-  max-height: 7vh;
+	background-color: rgb(2, 31, 66);
+	color: rgb(254, 203, 69);
+	max-height: 7vh;
 }
 
 .nav-link {
-  color: rgb(254,203,69);
+	color: rgb(254, 203, 69);
 }
 
-.nav-link:hover{
-  color: white;
+.nav-link:hover {
+	color: white;
 }
 
+<<<<<<< HEAD
+.img-fluid {
+	object-fit: cover;
+	max-width: 100%;
+	max-height: 20vh;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#user_input{
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	justify-items: center;
+}
+
+#user-ingredients select {
+	width: 80vw;
+}
+=======
 
 // auto complete form
 * { box-sizing: border-box; }
@@ -98,3 +124,4 @@ input[type=submit] {
 }
 
 
+>>>>>>> 696c9db0762178b0c5d406d84eb54570b16767cb

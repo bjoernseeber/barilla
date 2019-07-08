@@ -87,4 +87,14 @@ input[type=submit] {
   height: 15vh;
   object-fit: cover; }
 
+#user_input {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center; }
+
+#user-ingredients select {
+  width: 80vw; }
+
 /*# sourceMappingURL=style.css.map */
