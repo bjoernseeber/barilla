@@ -9,7 +9,7 @@ mongoose.connect("mongodb://localhost/barilla", {
 const recipes = [
   {
     name: "SPAGHETTI WITH EGGPLANT & ZUCCHINI",
-    ingredientsList: [zucchini, chives, garlic, eggplant, parmiggiano],
+    ingredientsList: ["zucchini", "chives", "garlic", "eggplant", "parmiggiano"],
     ingredientsFull: ["Half a zucchini sliced in half moons", "1 tablespoon chives chopped", "1 clove garlic chopped", "1 cup eggplant diced", "½ cup Parmigiano Reggiano cheese shredded"],
     pasta: "Spaghetti",
     instructions: "Bring a large pot of water to a boil. In a large skillet cook the garlic in olive oil for about 2 minutes or until slightly yellow in color. Add eggplant, sauté for 3 minutes. Add zucchini and sauté for 3 more minutes, season with salt and pepper. Cook the pasta according to the package directions, reserve 1 cup of the cooking liquid and add it to the sauce. Bring to a simmer. Drain and toss the pasta with the sauce. Remove from heat and add the chives and Parmigiano Reggiano cheese, toss to combine.",
@@ -18,7 +18,7 @@ const recipes = [
   },
   {
     name: "SPAGHETTI WITH LEEKS, GRAPE TOMATOES",
-    ingredientsList: [leeks, crab, basil, cherry-tomatoes, lemon-zest],
+    ingredientsList: ["leeks", "crab", "basil", "cherry-tomatoes", "lemon-zest"],
     ingredientsFull: ["1 cup leeks cut in rings", "½ cup lump crab meat", "2 basil leaves torn", "½ pint cherry tomatoes halved", "½ teaspoon lemon zest"],
     pasta: "Spaghetti",
     instructions: "Bring a large pot of water to a boil. Meanwhile sauté leeks with 2 tablespoons olive oil for three minutes over medium heat, add tomatoes and lemon zest. Blister tomatoes on high heat, about two minutes. Add crab, season with salt and pepper. Meanwhile cook pasta according to package directions, drain reserving about 1/2 cup of cooking water. Toss pasta with crab mixture along with some cooking water. Stir in basil and remaining olive oil, serve immediately.",
@@ -27,7 +27,7 @@ const recipes = [
   },
   {
     name: "ELBOWS IN CREAMY PEAS AND PROSCIUTTO SAUCE",
-    ingredientsList: [sherry-wine, peas, parmigiano, onion, prosciutto],
+    ingredientsList: ["sherry-wine", "peas", "parmigiano", "onion", "prosciutto"],
     ingredientsFull: ["¼ cup sherry wine", "½ cup peas frozen", "½ cup parmigiano reggiano cheese grated", "¼ yellow onion peeled and chopped", "½ cup prosciutto julienne", "½ cup chicken broth", "½ cup heavy cream"],
     pasta: "Elbows",
     instructions: "Bring a large pot of water to a boil, season with salt. Sauté onion with olive oil in a large skillet over medium heat, until translucent, about 5 minutes. Add prosciutto, cook for 1 minute then add wine and reduce well. Add broth, peas, salt and black pepper; bring to a boil. Add heavy cream and bring to a simmer. Cook pasta according to the package directions. Drain pasta and toss with sauce in a large mixing bowl. Top with cheese before serving.",
@@ -36,7 +36,7 @@ const recipes = [
   },
   {
     name: "SPAGHETTI WITH ROASTED CAULIFLOWER, CAPERS AND GOLDEN RAISINS",
-    ingredientsList: [onion, raisins, cauliflower, capers, parsley, parmigiano ],
+    ingredientsList: ["onion", "raisins", "cauliflower", "capers", "parsley", "parmigiano"],
     ingredientsFull: ["½ cup onion diced", "¼ cup golden raisins soaked in 1 cup water", "¼ cauliflower cut into small florets", "½ tablespoon capers", "½ tablespoon parsley chopped", "½ cup Parmigiano Reggiano cheese grated"],
     pasta: "Spaghetti",
     instructions: "Pre-heat the oven to 425°F and bring a large pot of water to a boil. Toss the cauliflower in 2 tablespoons of olive oil, season with salt and pepper. Place on a sheet tray and roast in the oven until golden brown. Meanwhile, in a large skillet sauté the onion in 2 tablespoons of olive oil. Cook the pasta according to package directions. Reserve 1 cup of the cooking liquid and add it to the onions. ADD the pasta to the sauce and cook for 1 minute over medium heat, stirring frequently until it becomes creamy. ADD the cauliflower, capers and raisins and toss to combine.",
@@ -45,7 +45,7 @@ const recipes = [
   },
   {
     name: "FETTUCCINE SUMMER PASTA",
-    ingredientsList: [garlic, corn, basil, parmigiano,pine-nuts, cherry-tomatoes, thyme, pecorino],
+    ingredientsList: ["garlic", "corn", "basil", "parmigiano", "pine-nuts", "cherry-tomatoes", "thyme", "pecorino"],
     ingredientsFull: ["1 garlic clove, sliced thin", "½ bag frozen corn", "¼ cup basil leaves", "¼ cup Parmigiano-Reggiano cheese, shredded", "¼ cup pine nuts, toasted", "½ pound cherry tomatoes, multi-colored, quartered", "½ tablespoon thyme leaves", "¼ cup Pecorino Romano cheese"],
     pasta: "Fettuccine",
     instructions: "Bring a large pot of water to a boil and cook pasta according to package directions. In a large skillet sauté garlic in olive oil for 1 minute.  Add corn and sauté for 2-3 minutes or until slightly browned.  Add tomatoes and sauté for 1 minute. Add 1 cup of the pasta cooking water to skillet and bring to a simmer. Drain pasta and toss with the sauce. Before serving garnish with fresh herbs, cheese and pine nuts.",
@@ -54,7 +54,7 @@ const recipes = [
   },
   {
     name: "FETTUCCINE WITH SHRIMP & ASPARAGUS",
-    ingredientsList: [onion, shrimp, basil, asparagus],
+    ingredientsList: ["onion", "shrimp", "basil", "asparagus"],
     ingredientsFull: ["1 cup red onion, sliced thin", "8 small shrimp, cleaned & deveined", "¼ cup basil sliced", "½ bunch asparagus, sliced on a bias"],
     pasta: "Fettuccine",
     instructions: "Bring a large pot of water to a boil; cook pasta according to package directions. Meanwhile, in a large skillet, sauté onion in olive oil for 2-3 minutes or until slightly browned. Add asparagus and shrimp; cook for 2-3 minutes or until the shrimp are browned on both sides, then season with salt and pepper. Drain pasta, add to skillet and toss with the sauce. Remove from heat, fold in basil and serve immediately.",
