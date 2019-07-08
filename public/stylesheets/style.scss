@@ -6,7 +6,9 @@ body {
 .navbar {
   background-color: rgb(2,31,66);
   color: rgb(254,203,69);
+  max-height: 7vh;
 }
+
 .nav-link {
   color: rgb(254,203,69);
 }
@@ -14,6 +16,8 @@ body {
 .nav-link:hover{
   color: white;
 }
+
+
 
 
 // auto complete form
