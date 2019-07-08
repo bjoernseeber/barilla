@@ -63,7 +63,7 @@ const recipes = [
   },
   {
     name: "CHEESE TORTELLINI WITH PANCETTA IN A PINK SAUCE",
-    ingredientsList: ['tomatoes', 'heavy-cream', 'parsley', 'pancetta', 'onion', 'basil', parmigiano],
+    ingredientsList: ['tomatoes', 'heavy-cream', 'parsley', 'pancetta', 'onion', 'basil', "parmigiano"],
     ingredientsFull: ["14 ounces San Marzano tomatoes, canned, drained", "¼ cup heavy cream", "½ tablespoon fresh parsley, chopped", "1/3 cup Italian pancetta, cut into strips", "1/3 cup white onion, chopped", "1 tablespoon fresh basil, chopped", "1/4 cup Parmigiano-Reggiano cheese, freshly grated"],
     pasta: "Cheese tortellini",
     instructions: "Bring a large pot of water to a boil. Sauté pancetta in a large skillet over medium heat until crispy. Drain on a paper towel. Set aside. Heat oil in the same skillet over low heat. Add onions and sauté 10 minutes until tender. Add tomatoes, basil, salt and pepper. Simmer for 5 minutes. Add heavy cream, bring to a boil. Let cool. PROCESS sauce mixture in a blender until smooth. Set aside. Add Three Cheese Tortellini to boiling water and cook according to package directions. Drain and toss with sauce and cheese. Top with pancetta and chopped parsley.",
