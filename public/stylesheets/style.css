@@ -13,6 +13,13 @@ body {
 .nav-link:hover {
   color: white; }
 
+.img-fluid {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 20vh;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 * {
   box-sizing: border-box; }
 
