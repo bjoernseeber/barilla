@@ -4,7 +4,8 @@ body {
 
 .navbar {
   background-color: #021f42;
-  color: #fecb45; }
+  color: #fecb45;
+  max-height: 7vh; }
 
 .nav-link {
   color: #fecb45; }
