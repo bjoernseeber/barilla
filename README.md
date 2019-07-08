@@ -1,1 +1,0 @@
-BARILLA app created by Devan and Björn
