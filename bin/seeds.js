@@ -63,7 +63,7 @@ const recipes = [
   },
   {
     name: "CHEESE TORTELLINI WITH PANCETTA IN A PINK SAUCE",
-    ingredientsList: [tomatoes, heavy-cream, parsley, pancetta, onion, basil, parmigiano],
+    ingredientsList: ['tomatoes', 'heavy-cream', 'parsley', 'pancetta', 'onion', 'basil', parmigiano],
     ingredientsFull: ["14 ounces San Marzano tomatoes, canned, drained", "¼ cup heavy cream", "½ tablespoon fresh parsley, chopped", "1/3 cup Italian pancetta, cut into strips", "1/3 cup white onion, chopped", "1 tablespoon fresh basil, chopped", "1/4 cup Parmigiano-Reggiano cheese, freshly grated"],
     pasta: "Cheese tortellini",
     instructions: "Bring a large pot of water to a boil. Sauté pancetta in a large skillet over medium heat until crispy. Drain on a paper towel. Set aside. Heat oil in the same skillet over low heat. Add onions and sauté 10 minutes until tender. Add tomatoes, basil, salt and pepper. Simmer for 5 minutes. Add heavy cream, bring to a boil. Let cool. PROCESS sauce mixture in a blender until smooth. Set aside. Add Three Cheese Tortellini to boiling water and cook according to package directions. Drain and toss with sauce and cheese. Top with pancetta and chopped parsley.",
@@ -72,7 +72,7 @@ const recipes = [
   },
   {
     name: "CHEESE TORTELLINI & VEGETABLE PRIMAVERA",
-    ingredientsList: [scallion, zucchini, parmigiano, asparagus, tomatoes],
+    ingredientsList: ['scallion', 'zucchini', 'parmigiano', 'asparagus', 'tomatoes'],
     ingredientsFull: ["¼ cup scallion, white part only", "½ small zucchini diced, seeded", "½ cup Parmigiano-Reggiano cheese, grated", "½ bunch asparagus", "1 plum tomatoe diced, peeled"],
     pasta: "Cheese tortellini",
     instructions: "Bring a large pot of water to a boil. Remove the asparagus tips and cut the remaining part into ¼ inch long pieces. Slice scallions into small rings. Sauté the scallions, zucchini and asparagus in oil in a medium skillet over medium heat for about 8 minutes. Add tomatoes and sauté for 2 more minutes. Season with salt and pepper. Cook Three Cheese Tortellini according to package directions. Drain and add to the vegetable sauce. Sprinkle with cheese and serve.",
@@ -81,7 +81,7 @@ const recipes = [
   },
   {
     name: "CHEESE TORTELLINI WITH ROASTED RED PEPPER, ZUCCHINI & SPINACH",
-    ingredientsList: [zucchini, pepper, tomatoes, onion, spinach],
+    ingredientsList: ['zucchini', 'pepper', 'tomatoes', 'onion', 'spinach'],
     ingredientsFull: ["1 cup Zucchini Diced", "½ cup Roasted Red Pepper Sliced", "½ cup Fresh Tomato Diced", "½ cup Onion Diced", "1/8 tsp. Black Pepper Freshly Ground", "4 oz. Fresh Baby Spinach"],
     pasta: "Cheese tortellini",
     instructions: "Bring a large pot of water to a boil. Cook Three Cheese Tortellini according to package directions. Meanwhile, sauté onions in oil in a large skillet over medium heat for 5 minutes. Add zucchini and black pepper, cook for 3 minutes. Season with salt. Add red peppers and baby spinach and sauté for 1 additional minute. Drain Three Cheese Tortellini and mix with sauce in skillet. Stir in tomatoes and serve.",
@@ -90,7 +90,7 @@ const recipes = [
   },
   {
     name: "CHEESE TORTELLINI WITH PUMPKIN SAGE BUTTER",
-    ingredientsList: [sage, parmigiano, butter, pumpkin],
+    ingredientsList: ['sage', 'parmigiano', 'butter', 'pumpkin'],
     ingredientsFull: ["4 leaves Fresh Sage", "½ cup Parmigiano-Reggiano Cheese, Freshly Grated", "¼ pound Sweet Butter", "¼ cup Pumpkin Puree (May Substitute Pumpkin Pie Filling)"],
     pasta: "Cheese tortellini",
     instructions: "Bring 6 quarts water to a boil in a large pot. Place butter and sage in a 10- to 12-inch sauté pan over medium-high heat and cook until butter turns golden brown and spatters a bit. Add the pumpkin puree and remove from heat; it will make some noise here and be a little messy. Swirl the pan to mix the butter and pumpkin mixture together and set aside. Drop the Three Cheese Tortellini into the boiling water and cook according to package instructions; drain in a colander and immediately toss the cooked tortellini into the pan with the pumpkin mixture, place over medium heat and toss until pasta is coated with sauce. Mix in half of the grated Parmigiano and toss 10 seconds, then pour into a heated bowl and serve immediately.",
@@ -99,7 +99,7 @@ const recipes = [
   },
   {
     name: "RICOTTA & SPINACH TORTELLINI WITH CREAMY TOMATO & CRISPY BACON SAUCE",
-    ingredientsList: [onion, heavy-cream, basil, bacon, tomatoes, parmigiano],
+    ingredientsList: ['onion', 'heavy-cream', 'basil', 'bacon', 'tomatoes', 'parmigiano'],
     ingredientsFull: ["½ small yellow onion, peeled and chopped", "¼ cup heavy cream", "4 fresh basil leaves, washed and torn", "4 bacon slices, julienned", "1 28-oz Italian style canned tomatoes, chopped", "1/3 cup Parmigiano-Reggiano cheese, grated"],
     pasta: "Ricotta & spinach tortellini",
     instructions: "Bring a large pot of water to a boil, season with salt. Render bacon until crispy in a large skillet over medium heat, and set aside to drain. Saute onion in bacon fat over medium heat until translucent, about 4 minutes. Add tomatoes, bring to boil.; season with salt and pepper. Add cream and simmer a few minutes. Cook tortellini according to package directions. Drain tortellini and toss with the sauce in a large mixing bowl. Stir in cheese and basil. Top with crispy bacon over the top before serving.",
@@ -108,7 +108,7 @@ const recipes = [
   },
   {
     name: "CHEESE & SPINACH TORTELLINI WITH BUTTERNUT SQUASH, SAGE & PARMIGIANO-REGGIANO CHEESE",
-    ingredientsList: [butternut-squash, parmigiano, butter, sage, vegetable-broth],
+    ingredientsList: ['butternut-squash', 'parmigiano', 'butter', 'sage', 'vegetable-broth'],
     ingredientsFull: ["¼ butternut squash, diced small", "½ cup Parmigiano-Reggiano cheese, shaved", "1.5 tablespoons butter", "2 leaves sage", "1 cup vegetable broth"],
     pasta: "Cheese & spinach tortellini",
     instructions: "Cook tortellini according to package directions. Meanwhile, cook sage with butter for about two minutes over medium heat. When butter starts bubbling add butternut squash and cook over medium heat until slightly brown. Stir in broth, season with salt and pepper and simmer until thoroughly cooked. Drain tortellini and toss with the sauce. Top with cheese before serving. ",
@@ -117,7 +117,7 @@ const recipes = [
   },
   {
     name: "LASAGNE WITH BOLOGNESE SAUCE",
-    ingredientsList: [beef, onion, red-wine, flour, butter, pork, carrots, celery, tomatoe-paste, milk, nutmeg, parmigiano ],
+    ingredientsList: ['beef', 'onion', 'red-wine', 'flour', 'butter', 'pork', 'carrots', 'celery', 'tomato-paste', 'milk', 'nutmeg', 'parmigiano' ],
     ingredientsFull: ["4 ounces ground beef", "1 3/4 ounces onions", "1/3 cup dry red wine", "Water (about 1 cup) as needed", "5 tablespoons flour", "2 tablespoons butter", "4 ounces ground pork", "1 3/4 ounces carrots", "1 3/4 ounces celery", "1/2 cup tomato paste", "5 1/2 tablespoons butter", "6 cups milk", "Nutmeg to taste", "1 cup Parmigiano-Reggiano cheese, grated" ],
     pasta: "Lasagne",
     instructions: "Heat olive oil in a pan over medium heat and sauté minced onion, carrot and celery until golden. Add ground meat and cook over high heat until brown and cooked through. Pour in red wine, season with salt and pepper; reduce until dry. Lower the heat and stir in tomato paste and water. Cook over low heat for about 40 minutes, adding spoonfuls of warm water, if too thick. Prepare Béchamel sauce: Melt butter in a saucepan, stir in sifted flour and cook over low heat for 1 minute, whisking constantly. Add milk in a steady stream and bring to a boil, whisking constantly. Season with salt and nutmeg. Cook for a few more minutes until thick. Preheat oven to 350° F. In 13 x 9 inch baking dish, pour a layer of Bolognese sauce with grated Parmigiano, then arrange a layer of pasta to cover the bottom of the dish. Make a layer of Béchamel and a layer of meat sauce with Parmigiano. Continue this process, alternating pasta and sauce, and finish with a layer of pasta. Cover with remaining Béchamel sauce and pats of butter. Bake for 30 minutes or until the surface is golden crunchy. Remove from the oven and set aside to rest for 15 - 20 minutes before serving.",
