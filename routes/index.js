@@ -17,5 +17,6 @@ router.get("/recipes", (req, res) => {
 		});
 });
 
+console.log()
 
 module.exports = router;
