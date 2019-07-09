@@ -31,7 +31,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 50px; }
 
 #user_input {
   display: flex;
@@ -40,7 +41,7 @@ body {
   align-items: center; }
 
 #user-ingredients {
-  width: 50vw; }
+  width: 30vw; }
 
 .carousel-caption {
   color: black;
