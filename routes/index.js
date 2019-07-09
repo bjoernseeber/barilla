@@ -12,7 +12,7 @@ router.get("/", (req, res, next) => {
 		const arrIngrFlat = [].concat.apply([], arrIngr)
 		const objIngr = new Set(arrIngrFlat);
 		const arrIngrNoDup = [...objIngr]
-		console.log("hello", arrIngrNoDup);
+		// console.log(arrIngrNoDup);
 		res.render('index',{ arrIngrNoDup })
 
 	})
@@ -36,7 +36,8 @@ router.post("/ingredients", (req, res) => {
 	const search = req.body.userIngredientInput;
 	Recipe.find({ ingredientsList: { $all: search } })
 		.then(recipe => {
-			
+			// res.redirect('ingredients')
+			res.render('ingredients', {recipe} )
 			console.log(recipe);
 		})
 		.catch(err => {
