@@ -34,20 +34,19 @@ body {
 	padding-top: 1vh; 
 }
 
-<<<<<<< HEAD
-// User input search bar
-
-#user-form {
-=======
 
 // AUTH Design
+#user-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	align-items: center; }
+	
 #user_input {
->>>>>>> 42c56923aa654eea7fecb1faaa9598aa0d926a1a
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
   align-items: center;
-  
 }
 
 #user-ingredients {
@@ -55,12 +54,8 @@ body {
 }
 
 
-<<<<<<< HEAD
-// carousel
-=======
 //Carousel Design
 
->>>>>>> 42c56923aa654eea7fecb1faaa9598aa0d926a1a
 .carousel-caption {
 	color: black;
 	background-color: white;
