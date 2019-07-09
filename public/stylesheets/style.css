@@ -16,12 +16,53 @@ body {
 .nav-link:hover {
   color: white; }
 
-.img-fluid {
-  object-fit: cover;
-  max-width: 100%;
-  max-height: 20vh;
-  background-position: center center;
-  background-repeat: no-repeat; }
+.footer {
+  background-color: #021f42;
+  color: white;
+  font-size: 0.8rem;
+  max-height: 4vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 1vh; }
+
+#user_input {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center; }
+
+#user-ingredients select {
+  width: 80vw; }
+
+.user-input-ingredients {
+  display: flex;
+  flex-direction: column; }
+
+.carousel-caption {
+  color: black;
+  background-color: white;
+  position: relative;
+  height: 120vh;
+  overflow-y: scroll;
+  margin-top: 3vh;
+  left: auto;
+  right: auto; }
+
+.carousel-inner {
+  overflow: visible; }
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #021f42;
+  position: fixed;
+  bottom: 65vh; }
+
+.carousel-image {
+  height: 20vh;
+  object-fit: cover; }
 
 #user-form {
   display: flex;

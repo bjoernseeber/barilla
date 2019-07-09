@@ -1,3 +1,5 @@
+// BASIC Layout
+
 body {
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -20,17 +22,27 @@ body {
 	color: white;
 }
 
-.img-fluid {
-	object-fit: cover;
-	max-width: 100%;
-	max-height: 20vh;
-	background-position: center center;
-	background-repeat: no-repeat;
+.footer {
+	background-color: rgb(2, 31, 66);
+	color: white;
+	font-size: 0.8rem;
+	max-height: 4vh;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding-top: 1vh; 
 }
 
+<<<<<<< HEAD
 // User input search bar
 
 #user-form {
+=======
+
+// AUTH Design
+#user_input {
+>>>>>>> 42c56923aa654eea7fecb1faaa9598aa0d926a1a
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -43,14 +55,19 @@ body {
 }
 
 
+<<<<<<< HEAD
 // carousel
+=======
+//Carousel Design
+
+>>>>>>> 42c56923aa654eea7fecb1faaa9598aa0d926a1a
 .carousel-caption {
 	color: black;
 	background-color: white;
 	position: relative;
-	height: 30vh;
+	height: 120vh;
 	overflow-y: scroll;
-	margin-top: 30px;
+	margin-top: 3vh;
 	left: auto;
 	right: auto;
 }
@@ -62,9 +79,11 @@ body {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
 	background-color: rgb(2, 31, 66);
+	position: fixed;
+	bottom: 65vh;
 }
 
 .carousel-image {
-	height: 15vh;
+	height: 20vh;
 	object-fit: cover;
 }
