@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <div class="fridge-bg">
+=======
+>>>>>>> c4d7bf8aeb52e6566cddb5a65229eb9c1e78e3ec
 <div class="form-wrapper">
 
   <form id="user-form" action="/ingredients" method="post">
@@ -6,6 +9,9 @@
     <div class="input-wrapper">
       <select id="user-ingredients" class="js-example-placeholder-multiple js-states form-control"
         name="userIngredientInput" multiple="multiple">
+        {{#each arrIngrNoDup}}
+        <option value="{{ this }}">{{ this }}</option>
+        {{/each}}
       </select>
     </div>
 
