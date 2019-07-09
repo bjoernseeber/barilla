@@ -1,15 +1,30 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
 
+<div class="form-wrapper">
 
-<form id="user_input" action="/ingredients" method="post">
-  
-  <select id="user_ingredients" class="js-example-placeholder-multiple js-states form-control" multiple="multiple">
+  <form id="user-form" action="/ingredients" method="post">
 
-  </select>
-  <br />
-  <div class="btn submit-btn user-input-ingredients">
-  <button type="submit">Show Me Recipes</button>
-  </div>
+    <div class="input-wrapper">
+      <select id="user-ingredients" class="js-example-placeholder-multiple js-states form-control"
+        name="userIngredientInput" multiple="multiple">
+      </select>
+    </div>
 
-</form>
+    <div class="button-wrapper">
+      <button class="btn btn-submit user-input-ingredients" type="submit">Show Me Recipes!</button>
+    </div>
+
+  </form>
+
+</div>
+<script>
+  $(document).ready(function () {
+    $('.js-example-basic-multiple').select2();
+  });
+
+  $(".js-example-placeholder-multiple").select2({
+    placeholder: "What's in your fridge?"
+  });
+
+</script>

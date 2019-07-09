@@ -6,15 +6,15 @@ document.addEventListener(
 	false
 );
 
-let ingredientsList = document.getElementById("user_ingredients").ingredients;
+
 let ingredients = [
 	{
 		text: "Onions",
-		value: "onions"
+		value: "onion"
 	},
 	{
-		text: "Peppers (Green)",
-		value: "Pepper green"
+		text: "Peas",
+		value: "peas"
 	},
 	{
 		text: "Mushrooms",
@@ -22,12 +22,15 @@ let ingredients = [
 	}
 ];
 
-// ingredients.forEach(option =>
-// 	ingredientsList.add(new Option(option.text, option.value))
-// );
+let option = "";
+for (var i = 0; i < ingredients.length; i++) {
+	option +=
+		'<option value="' +
+		ingredients[i].value +
+		'">' +
+		ingredients[i].text +
+		"</option>";
+}
+$("#user-ingredients").append(option);
 
-var option = '';
-    for(var i = 0; i < ingredients.length; i++){
-        option += '<option value="' + ingredients[i].value + '">' + ingredients[i].text + '</option>';
-    }
-    $("#user_ingredients").append(option);
+

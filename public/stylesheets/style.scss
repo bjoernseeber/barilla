@@ -1,5 +1,4 @@
 body {
-	padding: 10px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -29,23 +28,22 @@ body {
 	background-repeat: no-repeat;
 }
 
-#user_input {
+// User input search bar
+
+#user-form {
 	display: flex;
-	align-items: center;
-	align-content: center;
+	flex-direction: column;
 	justify-content: center;
-	justify-items: center;
+  align-items: center;
+  
 }
 
-#user-ingredients select {
-	width: 80vw;
+#user-ingredients {
+  width: 50vw;
 }
 
-.user-input-ingredients {
-  display: flex;
-  flex-direction: column
-}
 
+// carousel
 .carousel-caption {
 	color: black;
 	background-color: white;
