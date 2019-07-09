@@ -1,5 +1,4 @@
 body {
-  padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 * {
@@ -47,7 +46,8 @@ body {
 .carousel-inner {
   overflow: visible; }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
   background-color: #021f42; }
 
 .carousel-image {
