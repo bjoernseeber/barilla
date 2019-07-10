@@ -1,33 +1,31 @@
 <div class="fridge-bg">
-<div class="form-wrapper">
-<div class="fridge-input"
-  <form id="user-form" action="/ingredients" method="post">
+  <div class="form-wrapper">
+    <div class="fridge-input">
+      <form id="user-form" action="/ingredients" method="post">
 
-    <div class="input-wrapper">
-      <select id="user-ingredients" class="js-example-placeholder-multiple js-states form-control"
-        name="userIngredientInput" multiple="multiple">
-        {{#each arrIngrNoDup}}
-        <option value="{{ this }}">{{ this }}</option>
-        {{/each}}
-      </select>
+        <div class="input-wrapper">
+          <select id="user-ingredients" class="js-example-placeholder-multiple js-states form-control"
+            name="userIngredientInput" multiple="multiple">
+            {{#each arrIngrNoDup}}
+            <option value="{{ this }}">{{ this }}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        <div class="button-wrapper">
+          <button class="btn btn-submit user-input-ingredients" type="submit">Let's Go!</button>
+        </div>
+
+      </form>
+
     </div>
+    <script>
+      $(document).ready(function () {
+        $('.js-example-basic-multiple').select2();
+      });
 
-    <div class="button-wrapper">
-      <button class="btn btn-submit user-input-ingredients" type="submit">Show Me Recipes!</button>
-    </div>
-
-  </form>
-
-</div>
-<script>
-  $(document).ready(function () {
-    $('.js-example-basic-multiple').select2();
-  });
-
-  $(".js-example-placeholder-multiple").select2({
-    placeholder: "What's in your fridge?"
-  });
-
-
-</script>
-</div>
+      $(".js-example-placeholder-multiple").select2({
+        placeholder: "What's in your fridge?"
+      });
+    </script>
+  </div>

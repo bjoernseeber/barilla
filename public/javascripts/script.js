@@ -1,6 +1,3 @@
-// added  'const Recipe' to try and access ingredientsList from mongoDB for search
-// const Recipe = require("../models/Recipe");
-
 document.addEventListener(
 	"DOMContentLoaded",
 	() => {
@@ -8,32 +5,3 @@ document.addEventListener(
 	},
 	false
 );
-
-
-// let ingredients = [
-// 	{
-// 		text: "Onions",
-// 		value: "onion"
-// 	},
-// 	{
-// 		text: "Peas",
-// 		value: "peas"
-// 	},
-// 	{
-// 		text: "Mushrooms",
-// 		value: "mushrooms"
-//   }
-// ];
-
-// let option = "";
-// for (let i = 0; i < ingredients.length; i++) {
-// 	option +=
-// 		'<option value="' +
-// 		ingredients[i].value +
-// 		'">' +
-// 		ingredients[i].text +
-// 		"</option>";
-// }
-// $("#user-ingredients").append(option);
-
-
