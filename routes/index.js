@@ -33,8 +33,6 @@ router.get("/recipes", (req, res) => {
 
 router.post("/ingredients/", (req, res) => {
 	const search = req.body.userIngredientInput;
-	const ownedArr = [];
-	const toBuyArr = [];
 
 	Recipe.find({ ingredientsList: { $in: search } })
 		.then(recipes => {
@@ -51,29 +49,30 @@ router.post("/ingredients/", (req, res) => {
 
 				return bScore - aScore;
 			});
-
-			const ingredientsArr = recipes.map(x => x.ingredientsList);
-			const ingredientsArrFlat = [].concat.apply([], ingredientsArr);
-			const ingredientsObj = new Set(ingredientsArrFlat);
-			const recipeIngredients = [...ingredientsObj];
-
-			console.log(recipeIngredients);
-
-			recipeIngredients.forEach(x => {
-				if (search.includes(x)) {
-					ownedArr.push(x);
-				} else {
-					toBuyArr.push(x);
-				}
-			});
-			console.log("to buy", toBuyArr);
-
-			// console.log(search);
-			// console.log(recipes.map(el => el.ingredientsList));
-			console.log("owned", ownedArr);
+			
 			const slicedRecipes = recipes.slice(0, 3);
 
-			res.render("ingredients", { slicedRecipes });
+			const resultsArr = slicedRecipes.slice().map(el => {
+				const toBuyArr = [];
+				const ownedArr = [];
+				el.ingredientsList.forEach(ingredient => {
+					if (search.includes(ingredient)) {
+						console.log("owned ingredient" + ingredient);
+						ownedArr.push(ingredient);
+					} else {
+						console.log("to buy ingredient" + ingredient);
+						toBuyArr.push(ingredient);
+					}
+				});
+				
+				console.log("Sliced receipes: " + slicedRecipes);
+				el.buy = toBuyArr;
+				el.own = ownedArr;
+				return el;
+			});
+		
+
+			res.render("ingredients", { resultsArr });
 		})
 		.catch(err => {
 			console.log("Error while updating the recipe: ", err);
@@ -81,25 +80,3 @@ router.post("/ingredients/", (req, res) => {
 });
 
 module.exports = router;
-
-//Not needed (?)
-// router.get("/", (req, res, next) => {
-// 	const resultsArr = [];
-// 	Recipe.find({}).then(recipe => {
-// 		recipe.forEach(doc, err => {
-// 			resultsArr.push(doc);
-// 		});
-// 	});
-// });\
-
-// also not needed
-
-// recipes.forEach(x => {
-// 	x.ingredientsList.forEach(y =>{
-// 		if(search.includes(y.ingredientsList(x))){
-// 			ownedArr.push(x)}
-// 			else {
-// 				toBuyArr.push(x)
-// 			}
-// 	})
-// 	})
