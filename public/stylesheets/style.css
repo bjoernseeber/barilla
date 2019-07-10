@@ -21,6 +21,7 @@ body {
   color: white;
   font-size: 0.8rem;
   max-height: 4vh;
+  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -89,12 +90,39 @@ h6 {
   padding-bottom: 1vh; }
 
 .fridge-bg {
+  color: white;
+  background-image: radial-gradient(#1c5e8b, #011227);
+  background-size: cover;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; }
+
+.user-design {
+  color: white;
+  background-color: #e8f0fe;
   background-image: radial-gradient(#1c5e8b, #011227);
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.user-design p {
+  position: absolute;
+  bottom: -102%;
+  margin: 0 auto; }
+
+.special-color-user {
+  color: #fecb45; }
+
+form#form-container {
+  position: absolute;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */

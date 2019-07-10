@@ -69,6 +69,14 @@ hbs.registerHelper("ifUndefined", (value, options) => {
 // default value for title local
 app.locals.title = "Barilla";
 
+const setUser = () => {
+  return (req, res, next) => {
+    app.locals.user = req.user
+    console.log(req.user)
+    next();
+  };
+};
+
 // Enable authentication using session + passport
 app.use(
   session({
@@ -81,10 +89,14 @@ app.use(
 app.use(flash());
 require("./passport")(app);
 
+app.use(setUser());
+
+
 const index = require("./routes/index");
 app.use("/", index);
 
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
+
 
 module.exports = app;

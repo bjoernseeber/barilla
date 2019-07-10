@@ -49,37 +49,19 @@
             USER
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          {{#if user}}
+            <a class="dropdown-item" href="/auth/logout">Logout</a>
+            <a class="dropdown-item" href="/auth/profile">Profile</a>
+            {{else}}
             <a class="dropdown-item" href="/auth/login">Login</a>
             <a class="dropdown-item" href="/auth/signup">Signup</a>
-            <a class="dropdown-item" href="/auth/logout">Logout</a>
-          </div>
+          {{/if}}
+        </div>
         </li>
       </ul>
       </div>
-   
   </nav>
 
-  {{!-- <nav class="navbar">
-    <a class="navbar-logo" ><img src='/images/barilla-logo.png' alt="barilla logo" style="max-height: 6vh; margin-top: -1vh; margin-left: -3vw;"></a>
-    <ul class="navbar-nav justify-content-end">
-      <li class="nav-item p-2">
-        <a class="nav-link" href="/">FRIDGE</a>
-      </li>
-      <li class="nav-item p-2">
-        <a class="nav-link" href="/recipes">RECIPES</a>
-      </li>
-      <li class="nav-item dropdown p-2">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          USER
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="/auth/login">Login</a>
-        <a class="dropdown-item" href="/auth/signup">Signup</a>
-        <a class="dropdown-item" href="/auth/logout">Logout</a>
-        </div>
-        </li>
-        </ul>
-  </nav> --}}
 
   {{{body}}}
 
