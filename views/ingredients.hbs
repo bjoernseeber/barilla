@@ -1,6 +1,6 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        {{#each recipe}}
+        {{#each resultsArr}}
         {{#if @first}}
         <div class="carousel-item active ">
             <a href="https://google.de"></a>
@@ -10,9 +10,13 @@
                     <h5>{{name}}</h5>
                     <h6 class="text-left">PASTA</h6>
                     <p class="text-left ingredients-text">{{pasta}}</p> 
+                    <h6 class='text-left'>INGREDIENTS OWNED</h6>
+                    <p class="text-left ingredients-text">{{ own }}</p>
+                    <h6 class='text-left'>INGREDIENTS LEFT TO BUY</h6>
+                    <p class="text-left ingredients-text">{{ buy }}</p>
                     <h6 class="text-left">INGREDIENTS</h6>
                     <p class="text-left ingredients-text">{{ingredientsFull}}</p>
-                    <h6 class="text-left">INSTRUCTIONS</h6>
+                    <h6 class="'text-left'">INSTRUCTIONS</h6>
                     <p class="text-left instructions-text">{{instructions}}</p>
                 </div>
             </div>
@@ -25,6 +29,10 @@
                     <h5>{{name}}</h5>
                     <h6 class="text-left">PASTA</h6>
                     <p class="text-left ingredients-text">{{pasta}}</p> 
+                    <h6 class='text-left'>INGREDIENTS OWNED</h6>
+                    <p class="text-left ingredients-text">{{ own }}</p>
+                    <h6 class='text-left'>INGREDIENTS LEFT TO BUY</h6>
+                    <p class="text-left ingredients-text">{{ buy }}</p>
                     <h6 class="text-left">INGREDIENTS</h6>
                     <p class="text-left ingredients-text">{{ingredientsFull}}</p>
                     <h6 class="text-left">INSTRUCTIONS</h6>
@@ -34,7 +42,6 @@
         </div>
         {{/if}}
         {{/each}}
-
 
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
