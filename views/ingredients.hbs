@@ -1,6 +1,6 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        {{#each recipe}}
+        {{#each slicedRecipes}}
         {{#if @first}}
         <div class="carousel-item active ">
             <a href="https://google.de"></a>
@@ -10,7 +10,7 @@
                     <h5>{{name}}</h5>
                     <h6 class="text-left">INGREDIENTS</h6>
                     <p class="text-left ingredients-text">{{ingredientsFull}}</p>
-                    <h6 class="text-left">INSTRUCTIONS</h6>
+                    <h6 class="'text-left'">INSTRUCTIONS</h6>
                     <p class="text-left instructions-text">{{instructions}}</p>
                 </div>
             </div>
