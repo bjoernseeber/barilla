@@ -49,36 +49,29 @@ router.post("/ingredients/", (req, res) => {
 
 				return bScore - aScore;
 			});
-			
+
 			const slicedRecipes = recipes.slice(0, 3);
 
-			const resultsArr = slicedRecipes.slice().map(el => {
+			// const resultsArr = slicedRecipes.slice().map(el => {
+			const resultsArr = slicedRecipes.map(el => {
 				const toBuyArr = [];
 				const ownedArr = [];
 				el.ingredientsList.forEach(ingredient => {
 					if (search.includes(ingredient)) {
-						console.log("owned ingredient" + ingredient);
 						ownedArr.push(ingredient);
 					} else {
-						console.log("to buy ingredient" + ingredient);
 						toBuyArr.push(ingredient);
 					}
 				});
-				
-				console.log("Sliced receipes: " + slicedRecipes);
 				el.buy = toBuyArr;
 				el.own = ownedArr;
 				return el;
 			});
-		
-
 			res.render("ingredients", { resultsArr });
 		})
 		.catch(err => {
 			console.log("Error while updating the recipe: ", err);
 		});
 });
-
-
 
 module.exports = router;
