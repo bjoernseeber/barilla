@@ -3,7 +3,7 @@
     <div class="fridge-input">
       <form id="user-form" action="/ingredients" method="post">
 
-        <div class="input-wrapper">
+        <div class="input-wrapper" >
           <select id="user-ingredients" class="js-example-placeholder-multiple js-states form-control"
             name="userIngredientInput" multiple="multiple">
             {{#each arrIngrNoDup}}
@@ -13,12 +13,13 @@
         </div>
 
         <div class="button-wrapper">
-          <button class="btn btn-submit user-input-ingredients" type="submit">Let's Go!</button>
+          <button class="btn btn-submit user-input-ingredients mt-4" type="submit">Let's Go!</button>
         </div>
 
       </form>
 
     </div>
+        
     <script>
       $(document).ready(function () {
         $('.js-example-basic-multiple').select2();
@@ -29,3 +30,6 @@
       });
     </script>
   </div>
+
+  </div>
+

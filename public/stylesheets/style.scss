@@ -58,7 +58,8 @@ body {
 }
 
 #user-ingredients {
-	width: 30vw;
+	width: 60vw;
+	height: 20vh;
 }
 
 
@@ -117,15 +118,40 @@ padding-bottom: 1vh;
 
 .fridge-bg {
 	color: white;
-	background-image: radial-gradient(rgb(28,94,139), rgb(1, 18, 39));
-	background-size: cover;
 	height: 100vh;
+	background-image: url("../images/spaghetti.png"), radial-gradient(rgb(28,94,139), rgb(1, 18, 39)) ;
+	background-repeat: no-repeat;
+	background-size: 100% 90%, 100% 100%;
+	background-position: bottom;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
+
+.fridge-input {
+	position: absolute;
+	top: 15%;
+	left: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dropdown-menu {
+min-width: 1vw;
+left: -8.5vw;
+background-color: rgb(2, 31, 66);
+color: rgb(254, 203, 69);
+}
+
+.dropdown-item {
+	color: rgb(254, 203, 69);
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+}
+
 
 .user-design {
 	color: white;
@@ -157,3 +183,5 @@ form#form-container{
     flex-direction: column;
     align-items: center;
 }
+
+
