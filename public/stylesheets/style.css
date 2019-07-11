@@ -147,10 +147,7 @@ form#form-container {
   flex-direction: column;
   align-items: center; }
 
-.spaghetti {
-  max-height: 60vh;
-  margin-left: 0px;
-  position: absolute;
-  margin-bottom: 10%; }
+#container {
+  display: flex; }
 
 /*# sourceMappingURL=style.css.map */

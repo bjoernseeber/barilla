@@ -1,5 +1,5 @@
 <div class="user-design">
-<div id="container">
+
     <form action="/auth/user-recipes" method="post">
         <label for="name">Name: </label>
         <input type="text" name="name" id="name">
@@ -15,9 +15,10 @@
         <input type="number" name="time" id="time">
         <label for="image">Image: </label>
         <input type="number" name="image" id="image">
-        <button type="submit">Add a recipe</button>
-    </form>
 
+        <button type="submit" class="btn btn-secondary">Add a recipe</button>
+    </form>
+    
     {{#each recipes}}
     <div>
         <h4><a href="/auth/user-recipes/{{_id}}">{{name}}</a>
@@ -25,5 +26,5 @@
         </h4>
     </div>
     {{/each}}
-</div>
+
 </div>
