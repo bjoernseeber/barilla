@@ -13,8 +13,12 @@ router.get("/", (req, res, next) => {
 			const objIngr = new Set(arrIngrFlat);
 			const arrIngrNoDup = [...objIngr];
 
-			// console.log(arrIngrNoDup);
-			res.render("index", { arrIngrNoDup });
+			const upArray = arrIngrNoDup.map(
+				el => el[0].toUpperCase() + el.substr(1)
+			);
+			console.log(upArray, arrIngrNoDup);
+
+			res.render("index", { upperCaseIngredient });
 		})
 		.catch(err => {
 			console.log("Error while updating the book: ", err);
