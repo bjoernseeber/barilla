@@ -6,9 +6,9 @@
 
 <h6 class="text-left">EDIT RECIPES</h6>
 
-{{#each recipe.name}}
+{{#each recipe}}
 <div>
-    <p>List of user recipes</p>
+    <a href="/auth/user-recipes/{{_id}}">{{this.name}}</a><a href="/auth/user-recipes/{{_id}}/delete">Delete</a>
 </div>
 {{/each}}
 

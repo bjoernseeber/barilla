@@ -3,7 +3,12 @@ const passport = require('passport');
 const router = express.Router();
 const User = require("../models/User");
 const Recipe = require("../models/Recipe");
+const mongoose = require('mongoose')
 
+// decprecation warning
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcrypt");
@@ -73,10 +78,12 @@ const loginCheck = () => {
 };
 
 
-
 router.get("/profile", loginCheck(), (req, res) => {
-    res.render("auth/profile", { user: req.user});
+  Recipe.find({ owner: req.user._id }).then(recipe => {
+    res.render("auth/profile", { user: req.user, recipe});
 });
+});
+
 
 router.get("/add-recipe", loginCheck(), (req, res) => {
   res.render("auth/add-recipe", { user: req.user});
@@ -116,8 +123,46 @@ router.post("/add-recipe", (req, res, next) => {
     });
 });
 
+router.get(
+  "/user-recipes/:recipeId/delete",
+  (req, res, next) => {
+    const recipeId = req.params.recipeId;
+    Recipe.deleteOne({ _id: recipeId })
+      .then(data => {
+        res.redirect("/auth/profile");
+      })
+      .catch(err => {
+        next(err);
+      });
+  }
+);
 
 
+router.get("/user-recipes/:recipeId", (req, res, next) => {
+  console.log('hello')
+  Recipe.findOne({_id: req.params.recipeId})
+    .then((recipe) => {
+      res.render("auth/user-recipes", { recipe });
+    })
+    .catch(err => {
+      next(err);
+    });
+});
 
+router.post('/user-recipes/', (req, res, next) => {
+  let { name, ingredientsList, ingredientsFull, pasta, instructions, time, image } = req.body;
+  
+  //ingredientsList=ingredientsList.split(",")
+  //ingredientsFull=ingredientsFull.split(",")
+
+  console.log(ingredientsFull)
+  Recipe.update({_id: req.params.recipeId}, { $set: {name, ingredientsList, ingredientsFull, pasta, instructions, time, image}})
+  .then((recipe) => {
+    res.redirect('/auth/profile');
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+});
 
 module.exports = router;
