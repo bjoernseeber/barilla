@@ -3,11 +3,8 @@ const router = express.Router();
 const Recipe = require("../models/Recipe");
 
 
-
 /* GET home page */
 router.get("/", (req, res, next) => {
-	// res.render("index");
-
 	Recipe.find({})
 		.then(recipe => {
 			const arrIngr = recipe.map(x => x.ingredientsList);
@@ -38,6 +35,7 @@ router.get("/", (req, res, next) => {
 		});
 });
 
+
 router.get("/recipes", (req, res) => {
 	Recipe.find({})
 		.then(recipes => {
@@ -50,10 +48,8 @@ router.get("/recipes", (req, res) => {
 
 router.post("/ingredients/", (req, res) => {
 	const search = req.body.userIngredientInput;
-
 	Recipe.find({ ingredientsList: { $in: search } })
 		.then(recipes => {
-			// res.redirect('ingredients')
 
 			recipes.sort((a, b) => {
 				const aScore = a.ingredientsList.filter(ingredient => {
@@ -68,8 +64,6 @@ router.post("/ingredients/", (req, res) => {
 			});
 
 			const slicedRecipes = recipes.slice(0, 3);
-
-			// const resultsArr = slicedRecipes.slice().map(el => {
 			const resultsArr = slicedRecipes.map(el => {
 				const toBuyArr = [];
 				const ownedArr = [];
