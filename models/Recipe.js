@@ -11,7 +11,11 @@ const recipeSchema = new Schema(
 		time: Number,
 		image: String,
 		own: Array,
-		buy: Array
+		buy: Array,
+		owner: {
+			type: Schema.Types.ObjectId,
+			ref: "User"
+		}
 	},
 	{
 		timestamps: {

@@ -1,12 +1,29 @@
-<div class="user-design">
-<div id="container">
-    <h4>{{name}}</h4>
-    <p>{{ingredientsList}}</p>
-    <p>{{ingredientsFull}}</p>
-    <p>{{pasta}}</p>
-    <p>{{instructions}}</p>
-    <p>{{time}}</p>
-    <p>{{image}}</p>
-    <a href="/auth/user-recipe/{{recipe._id}}/delete">Delete the recipe</a>
-</div>
-</div>
+
+<form class="user-design" action="/auth/user-recipes?recipe_id={{recipe._id}}" method="post">
+  <label for="">Name:</label>
+  <input type="text" name="name" value="{{recipe.name}}">
+
+  <label for="">Ingredients list:</label>
+  <input type="text" name="author" value="{{recipe.ingredientsList}}">
+
+  <label for="">Ingredients full:</label>
+  <input type="text" name="author" value="{{recipe.ingredientsFull}}">
+
+  <label for="">Pasta:</label>
+  <input type="text" name="pasta" value="{{recipe.pasta}}">
+
+  <label for="">Instructions:</label>
+  <input type="text" name="instructions" value="{{recipe.instructions}}">
+
+  <label for="">Time:</label>
+  <input type="number" name="time" value="{{recipe.time}}">
+
+  <label for="">Image-URL:</label>
+  <input type="text" name="image" value="{{recipe.image}}">
+
+  <button type="submit">EDIT</button>
+</form>
+
+
+
+

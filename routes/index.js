@@ -11,8 +11,24 @@ router.get("/", (req, res, next) => {
 			const arrIngrFlat = [].concat.apply([], arrIngr);
 			const objIngr = new Set(arrIngrFlat);
 			const arrIngrNoDup = [...objIngr].sort()
-			
-			res.render("index", { arrIngrNoDup });
+			console.log("pipoo",arrIngrNoDup)
+			const upArray = arrIngrNoDup.map(
+			el => el[0].toUpperCase() + el.substr(1)
+			);
+			const upArraySort = upArray.sort()
+			// const searchHbs = {
+			// 	value: arrIngrNoDup,
+			// 	text: upArraySort
+			// }
+			const searchHbs = [
+				arrIngrNoDup,
+				upArraySort
+			]
+
+			console.log(searchHbs)
+			// console.log(upArraySort, arrIngrNoDup);
+
+			res.render("index", { searchHbs });
 		})
 		.catch(err => {
 			console.log("Error while updating the search bar: ", err);
