@@ -1,0 +1,14 @@
+<div class="profile-design">
+<h3>Hello {{user.username}} !</h3>
+
+<a href="/auth/add-recipe/" class="btn btn-secondary">Add recipe</a>
+
+<h6 class="text-left">EDIT RECIPES</h6>
+
+{{#each recipe}}
+<div>
+    <a href="/auth/user-recipes/{{_id}}">{{this.name}}</a><a href="/auth/user-recipes/{{_id}}/delete">Delete</a>
+</div>
+{{/each}}
+
+</div>
