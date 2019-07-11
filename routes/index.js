@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const Recipe = require("../models/Recipe");
 
+
+
 /* GET home page */
 router.get("/", (req, res, next) => {
 	// res.render("index");
@@ -11,17 +13,27 @@ router.get("/", (req, res, next) => {
 			const arrIngr = recipe.map(x => x.ingredientsList);
 			const arrIngrFlat = [].concat.apply([], arrIngr);
 			const objIngr = new Set(arrIngrFlat);
-			const arrIngrNoDup = [...objIngr];
-
+			const arrIngrNoDup = [...objIngr].sort()
 			const upArray = arrIngrNoDup.map(
 				el => el[0].toUpperCase() + el.substr(1)
 			);
-			console.log(upArray, arrIngrNoDup);
+			const upArraySort = upArray.sort()
+			// const searchHbs = {
+			// 	value: arrIngrNoDup,
+			// 	text: upArraySort
+			// }
+			const searchHbs = [
+				arrIngrNoDup,
+				upArraySort
+			]
 
-			res.render("index", { upperCaseIngredient });
+			console.log(searchHbs)
+			// console.log(upArraySort, arrIngrNoDup);
+
+			res.render("index", { searchHbs });
 		})
 		.catch(err => {
-			console.log("Error while updating the book: ", err);
+			console.log("Error while updating the search bar: ", err);
 		});
 });
 

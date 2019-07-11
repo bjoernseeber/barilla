@@ -15,7 +15,7 @@ const flash = require("connect-flash");
 
 // Register partials and helper
 hbs.registerPartials(__dirname + "/views/partials");
-hbs.registerHelper("toLowerCase", str => str && str.toLowerCase());
+hbs.registerHelper("toUpperCase", str =>  str[0].toUpperCase() + str.substr(1));
 
 mongoose
   .connect("mongodb://localhost/barilla", { useNewUrlParser: true })
