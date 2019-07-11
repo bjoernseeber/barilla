@@ -159,4 +159,16 @@ form#form-container {
 #container {
   display: flex; }
 
+.profile-design {
+  color: white;
+  background-color: #e8f0fe;
+  background-image: radial-gradient(#1c5e8b, #011227);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5vh; }
+
 /*# sourceMappingURL=style.css.map */

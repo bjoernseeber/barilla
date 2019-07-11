@@ -149,15 +149,18 @@ router.get("/user-recipes/:recipeId", (req, res, next) => {
     });
 });
 
-router.post('/user-recipes/', (req, res, next) => {
+router.post('/user-recipes/:id', (req, res, next) => {
   let { name, ingredientsList, ingredientsFull, pasta, instructions, time, image } = req.body;
-  
-  //ingredientsList=ingredientsList.split(",")
-  //ingredientsFull=ingredientsFull.split(",")
+ 
+  let recipeId = req.params.id
 
-  console.log(ingredientsFull)
-  Recipe.update({_id: req.params.recipeId}, { $set: {name, ingredientsList, ingredientsFull, pasta, instructions, time, image}})
+  ingredientsList=ingredientsList.split(",")
+  ingredientsFull=ingredientsFull.split(",")
+
+  
+  Recipe.findByIdAndUpdate({_id: recipeId}, { $set: {name, ingredientsList, ingredientsFull, pasta, instructions, time, image}},{new: true})
   .then((recipe) => {
+    console.log('------updated recipe',recipe)
     res.redirect('/auth/profile');
   })
   .catch((error) => {
