@@ -1,28 +1,28 @@
 <div class="fridge-bg">
   <div class="form-wrapper">
     <div class="fridge-input">
-      <form id="user-form" action="/ingredients" method="post">
+      <p id="error-msg"></p>
+        <form name="form1" id="user-form" action="/ingredients" method="post" onsubmit="return required()">
 
-        <div class="input-wrapper">
-          <select id="user-ingredients" class="js-example-placeholder-multiple js-states form-control"
-            name="userIngredientInput" multiple="multiple">
-
-
-            {{#each searchHbs.[0]}}
-            <option value="{{ this }}">
-              {{toUpperCase this}}</option>
+          <div class="input-wrapper">
+            
+            <select id="user-ingredients" class="js-example-placeholder-multiple js-states form-control"
+              name="userIngredientInput" multiple="multiple">
+              
+              {{#each arrIngrNoDup}}
+              <option value="{{ this }}">
+                {{toUpperCase this}}</option>
               {{/each}}
 
+            </select>
 
-          </select>
-        </div>
+          </div>
 
-        <div class="button-wrapper">
-          <button class="btn btn-submit user-input-ingredients mt-4" type="submit">Let's Go!</button>
-        </div>
+          <div class="button-wrapper">
+            <button class="btn btn-submit user-input-ingredients mt-4" type="submit">Let's Go!</button>
+          </div>
 
-      </form>
-
+        </form>
     </div>
 
     <script>
@@ -35,5 +35,4 @@
       });
     </script>
   </div>
-
 </div>

@@ -16,15 +16,20 @@
                         <li>{{toUpperCase this}}</li>
                         {{/each}}
                     </ul>
-                    <h6 class='text-left'>INGREDIENTS LEFT TO BUY</h6>
+                    <h6 class='text-left'>INGREDIENTS STILL NEEDED</h6>
                     <ul class="text-left ingredients-text">
                         {{#each buy}}
                         <li>{{toUpperCase this}}</li>
                         {{/each}}
                     </ul>
-                    <p class="text-left ingredients-text"></p>
+                    {{!-- <p class="text-left ingredients-text"></p> --}}
                     <h6 class="text-left">INGREDIENTS</h6>
-                    <p class="text-left ingredients-text">{{ingredientsFull}}</p>
+                    <ul class="text-left ingredients-text">
+                        {{#each ingredientsFull}}
+                        <li>{{toUpperCase this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{!-- <p class="text-left ingredients-text">{{ingredientsFull}}</p> --}}
                     <h6 class="'text-left'">INSTRUCTIONS</h6>
                     <p class="text-left instructions-text">{{instructions}}</p>
                 </div>
@@ -44,14 +49,19 @@
                         <li>{{toUpperCase this}}</li>
                         {{/each}}
                     </ul>
-                    <h6 class='text-left'>INGREDIENTS LEFT TO BUY</h6>
+                    <h6 class='text-left'>INGREDIENTS STILL NEEDED</h6>
                     <ul class="text-left ingredients-text">
                         {{#each buy}}
                         <li>{{toUpperCase this}}</li>
                         {{/each}}
                     </ul>
                     <h6 class="text-left">INGREDIENTS</h6>
-                    <p class="text-left ingredients-text">{{ingredientsFull}}</p>
+                    <ul class="text-left ingredients-text">
+                        {{#each ingredientsFull}}
+                        <li>{{toUpperCase this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{!-- <p class="text-left ingredients-text">{{ingredientsFull}}</p> --}}
                     <h6 class="text-left">INSTRUCTIONS</h6>
                     <p class="text-left instructions-text">{{instructions}}</p>
                 </div>

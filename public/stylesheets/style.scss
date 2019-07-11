@@ -6,7 +6,6 @@
 
 body {
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
 }
 
 .navbar {
@@ -42,6 +41,12 @@ body {
 
 }
 // AUTH Design
+
+#error-msg{
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
 #user-form {
   display: flex;
   flex-direction: column;
@@ -60,6 +65,13 @@ body {
 #user-ingredients {
 	width: 60vw;
 	height: 20vh;
+}
+
+.user-input-ingredients {
+	// background-color: rgb(255,206,44)
+	background-color: rgb(2, 31, 66);
+	color: white;
+
 }
 
 //Carousel Design
@@ -115,7 +127,7 @@ padding-bottom: 1vh;
 }
 
 .fridge-bg {
-	color: white;
+	color: rgb(9, 94, 143);
 	height: 100vh;
 	background-image: url("../images/spaghetti.png"), radial-gradient(rgb(28,94,139), rgb(1, 18, 39)) ;
 	background-repeat: no-repeat;
@@ -135,6 +147,7 @@ padding-bottom: 1vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-around;
 }
 
 .dropdown-menu {
@@ -185,5 +198,6 @@ form#form-container{
 #container {
 	display: flex;
 }
+
 
 

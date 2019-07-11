@@ -31,6 +31,10 @@ body {
 .footer p {
   margin: 0; }
 
+#error-msg {
+  color: white;
+  text-align: center; }
+
 #user-form {
   display: flex;
   flex-direction: column;
@@ -47,6 +51,10 @@ body {
 #user-ingredients {
   width: 60vw;
   height: 20vh; }
+
+.user-input-ingredients {
+  background-color: #021f42;
+  color: white; }
 
 .carousel-caption {
   color: black;
@@ -91,7 +99,7 @@ h6 {
   padding-bottom: 1vh; }
 
 .fridge-bg {
-  color: white;
+  color: #095e8f;
   height: 100vh;
   background-image: url("../images/spaghetti.png"), radial-gradient(#1c5e8b, #011227);
   background-repeat: no-repeat;
@@ -108,7 +116,8 @@ h6 {
   left: 20%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-around; }
 
 .dropdown-menu {
   min-width: 1vw;
