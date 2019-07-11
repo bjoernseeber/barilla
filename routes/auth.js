@@ -2,6 +2,7 @@ const express = require("express");
 const passport = require('passport');
 const router = express.Router();
 const User = require("../models/User");
+const Recipe = require("../models/Recipe");
 
 
 // Bcrypt to encrypt passwords
@@ -87,49 +88,14 @@ router.get("/user-recipes", loginCheck(), (req, res) => {
 
 
 
-// profile
+// User recipes
 
-router.get("/user-recipes", (req, res, next) => {
-  Room.find()
-    .then(rooms => {
-      res.render("auth/user-recipes", { rooms });
-    })
-    .catch(err => {
-      next(err);
-    });
-});
+router.post("/add-recipe", (req, res, next) => {
+  let { name, ingredientsList,ingredientsFull, pasta, instructions, time, image } = req.body;
+  
+  ingredientsList=ingredientsList.split(",")
+  ingredientsFull=ingredientsFull.split(",")
 
-router.get("/user-recipes/:recipeId", (req, res, next) => {
-  Recipe.findById(req.params.recipeId)
-    .then(recipe => {
-      res.render("auth/user-recipes", { recipe });
-    })
-    .catch(err => {
-      next(err);
-    });
-});
-
-
-router.get(
-  "/user-recipes/:recipeId/delete",
-
-  (req, res, next) => {
-    const recipeId = req.params.recipeId;
-
-    Room.deleteOne({ _id: recipeId })
-      .then(data => {
-        res.redirect("/auth/user-recipes");
-      })
-      .catch(err => {
-        next(err);
-      });
-  }
-);
-
-router.post("/user-recipes", (req, res, next) => {
-  const { name, ingredientsList, ingredientsFull, pasta, instructions, time, image } = req.body;
-
-  console.log(req.user);
 
   Recipe.create({
     name,
@@ -141,13 +107,17 @@ router.post("/user-recipes", (req, res, next) => {
     image,
     owner: req.user._id
   })
-    .then(() => {
-      res.redirect("/");
+  .then((recipe) => {
+    console.log(recipe)
+      res.redirect("/auth/profile");
     })
     .catch(err => {
       next(err);
     });
 });
+
+
+
 
 
 module.exports = router;

@@ -1,8 +1,15 @@
 <div class="user-design">
+<h3>Hello {{user.username}} !</h3>
+
 <h2>My recipes</h2>
-{{username}}
+<a href="/auth/add-recipe/" class="btn btn-secondary">Add recipe</a>
 
-<button type="button" class="btn btn-secondary">Add recipe</button>
+<h6 class="text-left">EDIT RECIPES</h6>
 
+{{#each recipe.name}}
+<div>
+    <p>List of user recipes</p>
+</div>
+{{/each}}
 
 </div>
