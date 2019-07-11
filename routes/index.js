@@ -18,7 +18,7 @@ router.get("/", (req, res, next) => {
 			);
 			console.log(upArray, arrIngrNoDup);
 
-			res.render("index", { upperCaseIngredient });
+			res.render("index", { arrIngrNoDup });
 		})
 		.catch(err => {
 			console.log("Error while updating the book: ", err);

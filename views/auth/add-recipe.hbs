@@ -1,6 +1,6 @@
-<div class="user-design">
+<div >
 
-    <form action="/auth/user-recipes" method="post">
+    <form class="user-design" action="/auth/add-recipe" method="POST">
         <label for="name">Name: </label>
         <input type="text" name="name" id="name">
         <label for="ingredientsList">Ingredients List: </label>
@@ -8,23 +8,16 @@
         <label for="ingredientsFull">Ingredients with amount: </label>
         <input type="text" name="ingredientsFull" id="ingredientsFull">
         <label for="pasta">Pasta: </label>
-        <input type="number" name="pasta" id="pasta">
+        <input type="text" name="pasta" id="pasta">
         <label for="instructions">Instructions: </label>
-        <input type="number" name="instructions" id="instructions">
+        <input type="text" name="instructions" id="instructions">
         <label for="time">time: </label>
         <input type="number" name="time" id="time">
         <label for="image">Image: </label>
-        <input type="number" name="image" id="image">
+        <input type="text" name="image" id="image">
 
-        <button type="submit" class="btn btn-secondary">Add a recipe</button>
+    <button type="submit" class="btn btn-secondary">Add recipe</button>
     </form>
     
-    {{#each recipes}}
-    <div>
-        <h4><a href="/auth/user-recipes/{{_id}}">{{name}}</a>
-            <p>{{pasta}}</p>
-        </h4>
-    </div>
-    {{/each}}
 
 </div>
