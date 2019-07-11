@@ -200,5 +200,17 @@ form#form-container{
 	display: flex;
 }
 
+.profile-design {
+	color: white;
+	background-color: rgb(232, 240, 254);
+	background-image: radial-gradient(rgb(28,94,139), rgb(1, 18, 39));
+	background-size: cover;
+	height: 100vh;
 
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 5vh;
+}
 

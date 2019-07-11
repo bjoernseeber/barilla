@@ -1,13 +1,13 @@
 
-<form class="user-design" action="/auth/user-recipes?recipe_id={{recipe._id}}" method="post">
+<form class="user-design" action="/auth/user-recipes/{{recipe._id}}" method="post">
   <label for="">Name:</label>
   <input type="text" name="name" value="{{recipe.name}}">
 
   <label for="">Ingredients list:</label>
-  <input type="text" name="author" value="{{recipe.ingredientsList}}">
+  <input type="text" name="ingredientsList" value="{{recipe.ingredientsList}}">
 
   <label for="">Ingredients full:</label>
-  <input type="text" name="author" value="{{recipe.ingredientsFull}}">
+  <input type="text" name="ingredientsFull" value="{{recipe.ingredientsFull}}">
 
   <label for="">Pasta:</label>
   <input type="text" name="pasta" value="{{recipe.pasta}}">
