@@ -18,7 +18,7 @@ hbs.registerPartials(__dirname + "/views/partials");
 hbs.registerHelper("toUpperCase", str =>  str[0].toUpperCase() + str.substr(1));
 
 mongoose
-  .connect("mongodb://localhost/barilla", { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI ||"mongodb://localhost/barilla", { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
