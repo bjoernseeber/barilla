@@ -4,11 +4,10 @@
 <a href="/auth/add-recipe/" class="btn btn-secondary">Add recipe</a>
 
 <h6 class="text-left">EDIT RECIPES</h6>
-
-{{#each recipe}}
-<div>
-    <a href="/auth/user-recipes/{{_id}}">{{this.name}}</a><a href="/auth/user-recipes/{{_id}}/delete">Delete</a>
-</div>
-{{/each}}
+        {{#each recipe}}
+            <div class="delete-recipes">
+                <a class="recipe-name-btn" href="/auth/user-recipes/{{_id}}">{{toUpperCase this.name}}</a><a href="/auth/user-recipes/{{_id}}/delete"><span class="delete-recipe-btn">Delete</span></a>
+            </div>
+        {{/each}}
 
 </div>
