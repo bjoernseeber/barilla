@@ -167,15 +167,22 @@ form#form-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding-top: 5vh; }
+
+.user-recipe-many-wrapper {
+  margin-bottom: 150px; }
+
+.user-recipe-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2vh; }
 
 .recipe-name-btn {
   color: white; }
 
 .delete-recipe-btn {
-  padding-left: 20px;
+  padding-left: 4vw;
   color: #c94f59; }
 
 /*# sourceMappingURL=style.css.map */

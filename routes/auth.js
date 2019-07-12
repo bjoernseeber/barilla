@@ -80,6 +80,7 @@ const loginCheck = () => {
 
 router.get("/profile", loginCheck(), (req, res) => {
   Recipe.find({ owner: req.user._id }).then(recipe => {
+    console.log(recipe)
     res.render("auth/profile", { user: req.user, recipe});
 });
 });
