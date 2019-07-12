@@ -171,4 +171,11 @@ form#form-container {
   align-items: center;
   padding-top: 5vh; }
 
+.recipe-name-btn {
+  color: white; }
+
+.delete-recipe-btn {
+  padding-left: 20px;
+  color: #c94f59; }
+
 /*# sourceMappingURL=style.css.map */
