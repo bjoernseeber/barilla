@@ -10,7 +10,7 @@ const Recipe = require("../models/Recipe");
 const bcryptSalt = 10;
 
 mongoose
-  .connect('mongodb://localhost/barilla', {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI ||'mongodb://localhost/barilla', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
